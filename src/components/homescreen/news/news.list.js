@@ -20,7 +20,7 @@ export const NewsList = () => {
             url: "https://ichef.bbci.co.uk/news/976/cpsprodpb/3107/production/_123015521_gettyimages-1233663229.jpg"
         },
         {
-            name: "",
+            name: "Polish and Ukrainian activists march for LGBTQ rights in Warsaw",
             title: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do",
             url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPQesyZzeiU8bfobR77x4PStnMcIqu18evjQ&usqp=CAU"
         },
