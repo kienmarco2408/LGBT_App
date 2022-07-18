@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { StyleSheet, SafeAreaView, Dimensions, ScrollView, Image, View, Text } from "react-native";
+import { StyleSheet, Dimensions, ScrollView, Image, View, Text } from "react-native";
 
 const images = [
     "https://www.unison.org.uk/content/uploads/2017/11/rainbow-1024x724.jpg",
@@ -25,7 +25,6 @@ export const Slider = () => {
     }
 
     return(
-        <SafeAreaView style={styles.container}>
             <View style={styles.wrap}>
                 <ScrollView
                     onScroll={({nativeEvent}) => onchange}
@@ -52,7 +51,7 @@ export const Slider = () => {
                         images.map((e, index) =>
                             <Text
                                 key={e}
-                                style={imgActive == index ? styles.dotActive : styles.dot}
+                                style={imgActive === index ? styles.dotActive : styles.dot}
                             >
                             ●
                             </Text>
@@ -60,7 +59,6 @@ export const Slider = () => {
                     }
                 </View>
             </View>
-        </SafeAreaView>
     )
 };
 
