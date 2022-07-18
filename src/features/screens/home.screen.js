@@ -8,19 +8,19 @@ import { ScrollView } from 'react-native';
 
 export const HomeScreen = () => {
     return (
-        <SafeAreaView style={styles.container}>
-        <View style={styles.xuhuong}>
-          <Text style={{fontSize: 24, fontWeight: "bold"}}>Xu Hướng</Text>
-        </View>
-        <Button_Tags/>
-        <Slider />
-        <Button_News />
-        <ScrollView>
-        <NewsList/>
-        </ScrollView>
-        <View style={{padding: 15, backgroundColor:"pink"}}>
-          <Text>Navigation bar</Text>
-        </View>
+      <SafeAreaView style={styles.container}>
+          <View style={styles.xuhuong}>
+            <Text style={{fontSize: 24, fontWeight: "bold"}}>Xu Hướng</Text>
+          </View>
+          <Button_Tags/>
+          <Slider />
+          <Button_News />
+          <ScrollView>
+            <NewsList/>
+          </ScrollView>
+          <View style={{padding: 15, backgroundColor:"pink"}}>
+            <Text>Navigation bar</Text>
+          </View>
       </SafeAreaView>
     );
 };
