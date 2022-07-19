@@ -9,13 +9,17 @@ import { ScrollView } from 'react-native';
 export default function HomeScreen({ navigation }){
     return (
       <SafeAreaView style={styles.container}>
-        
+
           <View style={styles.xuhuong}>
-            <Text style={{fontSize: 24, fontWeight: "bold"}}>Xu Hướng</Text>
+            <Text style={{fontSize: 24, fontWeight: "bold"}}>Xu hướng</Text>
           </View>
-          <Button_Tags/>
+          <View style={{marginLeft: 10, marginBottom: 10}}>
+            <Button_Tags />
+          </View>
           <Slider />
-          <Button_News />
+          <View style={{marginLeft: 10, marginBottom: 10, marginTop: 10}}>
+            <Button_News />
+          </View>
           <ScrollView>
             <NewsList/>
           </ScrollView>
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     xuhuong:{ 
-      padding: 30, 
+      padding: 20, 
       paddingLeft: 16,
     },
     button_tags: {
