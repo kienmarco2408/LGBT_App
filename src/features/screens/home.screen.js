@@ -6,9 +6,10 @@ import { Slider } from '../../components/homescreen/slider';
 import { NewsList } from '../../components/homescreen/news/news.list';
 import { ScrollView } from 'react-native';
 
-export const HomeScreen = () => {
+export default function HomeScreen({ navigation }){
     return (
       <SafeAreaView style={styles.container}>
+        
           <View style={styles.xuhuong}>
             <Text style={{fontSize: 24, fontWeight: "bold"}}>Xu Hướng</Text>
           </View>
@@ -18,9 +19,7 @@ export const HomeScreen = () => {
           <ScrollView>
             <NewsList/>
           </ScrollView>
-          <View style={{padding: 15, backgroundColor:"pink"}}>
-            <Text>Navigation bar</Text>
-          </View>
+
       </SafeAreaView>
     );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import { StatusBar as ExpoStatusbar } from 'expo-status-bar';
-import { HomeScreen } from './src/features/screens/home.screen';
+import MainContainer from './src/components/navigation/main';
 
 export default function App() {
   return (
     <>
-      <HomeScreen />
+      <MainContainer />
       <ExpoStatusbar style="auto" />
     </>
   );
