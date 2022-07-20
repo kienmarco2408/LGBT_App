@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Image, Text, ScrollView } from 'react-native';
-import NewsCard from './news.card';
+import NewsCardSearch from './news.card.search';
 
-export const NewsList = ({ navigation }) => {
+export const NewsListSearch = ({ navigation }) => {
   const [news, setNews] = useState([
     {
       name: 'Any mechanical keyboard enthusiasts in design?',
@@ -27,9 +27,13 @@ export const NewsList = ({ navigation }) => {
   ]);
   return (
     <View>
-      {news.map((eachNews) => (
-        <NewsCard news_card={eachNews} key={eachNews.name} />
-      ))}
+      <FlatList
+        data={news}
+        renderItem={({ item }) => (
+          <NewsCardSearch news={item} key={item.name} />
+        )}
+        keyExtractor={(eachNews) => eachNews.name}
+      ></FlatList>
     </View>
   );
 };

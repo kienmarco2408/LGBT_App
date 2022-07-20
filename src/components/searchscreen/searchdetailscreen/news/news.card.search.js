@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default function NewsCard(props) {
+export default function NewsCardSearch(props) {
   let { name, title, url } = props.news_card;
   return (
     <View>

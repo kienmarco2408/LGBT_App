@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 
-export default function BookmarksScreen({ navigation }) {
+export default function DetailSearch({ navigation }) {
   return (
     <SafeAreaView>
       <View>
-        <Text>Bookmarks</Text>
+        <Text>DetailSearch</Text>
       </View>
     </SafeAreaView>
   );
