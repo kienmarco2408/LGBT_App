@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, Text, ScrollView } from 'react-native';
 import NewsCard from './news.card';
 
-export const NewsList = ({ navigation }) => {
+export const NewsList = () => {
   const [news, setNews] = useState([
     {
       name: 'Any mechanical keyboard enthusiasts in design?',

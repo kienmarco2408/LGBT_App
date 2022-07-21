@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 
-export default function DetailSearch({ navigation }) {
+export default function DetailHome({ navigation }) {
   return (
     <SafeAreaView>
       <View>
-        <Text>DetailSearch</Text>
+        <Text>DetailHome</Text>
       </View>
     </SafeAreaView>
   );

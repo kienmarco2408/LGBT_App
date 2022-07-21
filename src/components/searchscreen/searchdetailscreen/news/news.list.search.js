@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Image, Text, ScrollView } from 'react-native';
 import NewsCardSearch from './news.card.search';
+import { FlatList } from 'react-native';
 
 export const NewsListSearch = ({ navigation }) => {
   const [news, setNews] = useState([
@@ -29,10 +30,10 @@ export const NewsListSearch = ({ navigation }) => {
     <View>
       <FlatList
         data={news}
-        renderItem={({ item }) => (
-          <NewsCardSearch news={item} key={item.name} />
-        )}
         keyExtractor={(eachNews) => eachNews.name}
+        renderItem={({ item }) => (
+          <NewsCardSearch news_card_search={item} key={item.name} />
+        )}
       ></FlatList>
     </View>
   );

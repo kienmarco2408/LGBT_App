@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { Button } from 'react-native-paper';
-import { StyleSheet, SafeAreaView, Text, View, FlatList } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
-export const Button_Tags = () => {
+export const Button_Tags = ({ navigation }) => {
   const [tags, setTags] = useState([
     {
       name: 'bạo lực',
@@ -46,13 +52,13 @@ export const Button_Tags = () => {
               }}
             >
               <Button
+                onPress={() => navigation.navigate('Detail Search')}
                 dark="outlined-tonal"
                 color="#F5344B"
                 uppercase=""
                 style={styles.btn}
                 buttonColor="#F5344B"
                 mode="outlined"
-                onPress={() => console.log('')}
               >
                 <Text>{item.name}</Text>
               </Button>

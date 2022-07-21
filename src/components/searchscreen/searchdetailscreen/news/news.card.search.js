@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function NewsCardSearch(props) {
-  let { name, title, url } = props.news_card;
+  let { name, title, url } = props.news_card_search;
   return (
     <View>
       <View
