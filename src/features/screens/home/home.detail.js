@@ -1,12 +1,18 @@
-import * as React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import * as React from "react";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  Image
+} from "react-native";
+import { NewsDetail } from "../../../components/homescreen/detail/detail";
 
-export default function DetailHome({ navigation }) {
+export default function DetailNews({ navigation }) {
   return (
     <SafeAreaView>
-      <View>
-        <Text>DetailHome</Text>
-      </View>
+      <NewsDetail />
     </SafeAreaView>
   );
 }

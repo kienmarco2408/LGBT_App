@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { Button } from 'react-native-paper';
-import { StyleSheet, SafeAreaView, Text, View, FlatList } from 'react-native';
+import React, { useState } from "react";
+import { Button } from "react-native-paper";
+import { StyleSheet, SafeAreaView, Text, View, FlatList } from "react-native";
 
-export const Button_News = () => {
+export const Button_News = ({ navigation }) => {
   const [news, setNews] = useState([
     {
-      name: 'Tin tức mới',
+      name: "Tin tức mới"
     },
     {
-      name: 'Sức khỏe',
+      name: "Sức khỏe"
     },
     {
-      name: 'Pháp luật',
+      name: "Pháp luật"
     },
     {
-      name: 'Đời sống',
+      name: "Đời sống"
     },
     {
-      name: 'Xã hội',
+      name: "Xã hội"
     },
     {
-      name: 'Podcast',
-    },
+      name: "Podcast"
+    }
   ]);
   return (
     <View>
@@ -39,7 +39,6 @@ export const Button_News = () => {
                 style={styles.button_news}
                 buttonColor="#F5344B"
                 mode="outlined"
-                onPress={() => console.log('')}
               >
                 <Text>{item.name}</Text>
               </Button>
@@ -56,6 +55,6 @@ const styles = StyleSheet.create({
     width: 120,
     height: 40,
     marginRight: 10,
-    backgroundColor: '#F5344B',
-  },
+    backgroundColor: "#F5344B"
+  }
 });
