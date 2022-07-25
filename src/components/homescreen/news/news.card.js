@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { View, Image, Text, TouchableOpacity } from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import React, { useState } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function NewsCard(props, { onPress }) {
   let { name, title, url } = props.news_card;
@@ -12,7 +12,7 @@ export default function NewsCard(props, { onPress }) {
           height: 130,
           paddingStart: 10,
           paddingTop: 5,
-          flexDirection: "row"
+          flexDirection: 'row',
         }}
       >
         <View>
@@ -20,12 +20,12 @@ export default function NewsCard(props, { onPress }) {
             style={{
               width: 118,
               height: 118,
-              resizeMode: "cover",
+              resizeMode: 'cover',
               borderRadius: 10,
-              marginRight: 10
+              marginRight: 10,
             }}
             source={{
-              uri: url
+              uri: url,
             }}
           />
         </View>
@@ -35,26 +35,26 @@ export default function NewsCard(props, { onPress }) {
         <View
           style={{
             flex: 1,
-            marginRight: 10
+            marginRight: 10,
           }}
         >
           <Text
             style={{
-              color: "black",
+              color: 'black',
               fontSize: 14,
               marginTop: 20,
               marginLeft: 10,
-              fontWeight: "bold"
+              fontWeight: 'bold',
             }}
           >
             {name}
           </Text>
           <Text
             style={{
-              color: "black",
+              color: 'black',
               fontSize: 12,
               marginTop: 10,
-              marginLeft: 10
+              marginLeft: 10,
             }}
           >
             {title}
