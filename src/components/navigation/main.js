@@ -1,26 +1,26 @@
-import * as React from "react";
+import * as React from 'react';
 
-import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import { createStackNavigator } from "@react-navigation/stack";
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Screens
-import HomeScreen from "../../features/screens/home/home.screen";
-import VideoScreen from "../../features/screens/video/video.screen";
-import SearchScreen from "../../features/screens/search/search.screen";
-import BookmarksScreen from "../../features/screens/bookmarks/save.screen";
-import DetailSearch from "../../features/screens/search/detail.search";
-import DetailNews from "./../../features/screens/home/home.detail";
-import VideoDetail from "../../features/screens/video/video.detai";
-import BookmarksDetail from "../../features/screens/bookmarks/bookmarks";
+import HomeScreen from '../../features/screens/home/home.screen';
+import VideoScreen from '../../features/screens/video/video.screen';
+import SearchScreen from '../../features/screens/search/search.screen';
+import BookmarksScreen from '../../features/screens/bookmarks/save.screen';
+import DetailSearch from '../../features/screens/search/detail.search';
+import DetailNews from './../../features/screens/home/home.detail';
+import VideoDetail from '../../features/screens/video/video.detai';
+import BookmarksDetail from '../../features/screens/bookmarks/bookmarks';
 
 // Screen names
-const homeName = "Home";
-const videoName = "Video";
-const searchName = "Search";
-const bookmarksName = "Bookmarks";
+const homeName = 'Home';
+const videoName = 'Video';
+const searchName = 'Search';
+const bookmarksName = 'Bookmarks';
 
 const Tab = createBottomTabNavigator();
 const HeaderScreen = () => ({ headerShown: false });
@@ -79,27 +79,25 @@ function Tabs() {
     <Tab.Navigator
       initialRouteName={homeName}
       screenOptions={({ route }) => ({
+        tabBarActiveTintColor: '#F5344B',
+        tabBarInactiveTintColor: 'grey',
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
           let rn = route.name;
 
           if (rn === homeName) {
-            iconName = focused ? "home" : "home-outline";
+            iconName = focused ? 'home' : 'home-outline';
           } else if (rn === videoName) {
-            iconName = focused ? "play" : "play-outline";
+            iconName = focused ? 'play' : 'play-outline';
           } else if (rn === searchName) {
-            iconName = focused ? "search" : "search-outline";
+            iconName = focused ? 'search' : 'search-outline';
           } else if (rn === bookmarksName) {
-            iconName = focused ? "bookmarks" : "bookmarks-outline";
+            iconName = focused ? 'bookmarks' : 'bookmarks-outline';
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
-        }
+        },
       })}
-      tabBarOptions={{
-        activeTintColor: "#F5344B",
-        inactiveTintColor: "grey"
-      }}
     >
       <Tab.Screen
         name={homeName}
@@ -132,6 +130,7 @@ export default function MainContainer() {
       <Stack.Navigator>
         <Stack.Screen name="Back" component={Tabs} options={HeaderScreen} />
         <Stack.Screen name="Detail News" component={DetailNews} />
+        <Stack.Screen name="Detail Video" component={VideoDetail} />
         <Stack.Screen name="Detail Search" component={DetailSearch} />
       </Stack.Navigator>
     </NavigationContainer>
