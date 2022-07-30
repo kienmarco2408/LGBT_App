@@ -20,7 +20,7 @@ export default function NewsDetail(props) {
       <Image style={styles.image} source={{ uri: url }} />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{name}</Text>
-        <Text>{author}</Text>
+        <Text style={styles.author}>{author}</Text>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.content}>{sub}</Text>
         <Image
@@ -28,6 +28,7 @@ export default function NewsDetail(props) {
             width: 321,
             height: 196,
             marginHorizontal: 35,
+            marginBottom: 16,
           }}
           source={{ uri: url_2 }}
         />
@@ -48,15 +49,19 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 16,
   },
   title_2: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 16,
   },
   content: {
     fontSize: 16,
     color: '#4e4d4d',
+    marginBottom: 16,
+  },
+  author: {
+    marginBottom: 16,
   },
 });

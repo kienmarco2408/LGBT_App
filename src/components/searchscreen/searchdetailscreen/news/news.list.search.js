@@ -25,6 +25,16 @@ export const NewsListSearch = ({ navigation }) => {
       title: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do',
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPQesyZzeiU8bfobR77x4PStnMcIqu18evjQ&usqp=CAU',
     },
+    {
+      name: 'The Calm meditation app is getting its own celebrity-filled HBO Max',
+      title: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMM-_zho4Rq3MfBeyxvgV0Dwc-tWorhP59Q&usqp=CAU',
+    },
+    {
+      name: 'What to Watch on Wednesday: Peacock finally hatches with Brave',
+      title: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5IuvaKkkj8yLamma48Gq2I8HfRI3mY7gP7g&usqp=CAU',
+    },
   ]);
   return (
     <View>

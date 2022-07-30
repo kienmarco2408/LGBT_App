@@ -1,16 +1,25 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, Button } from 'react-native';
 import { Video, AVPlaybackStatus } from 'expo-av';
 
 export default function VideoDetail({ navigation }) {
   const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
+  const [statusSecordVideo, setStatusSecondVideo] = React.useState({});
+
   return (
     <SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
       <View style={{ height: 400, backgroundColor: 'grey', width: '100%' }}>
         <Video
+          ref={video}
+          style={styles.video}
           source={{
             uri: 'https://media.istockphoto.com/videos/woman-waving-a-rainbow-flag-at-the-gay-parade-video-id1216142845',
           }}
+          useNativeControls
+          resizeMode="contain"
+          isLooping
+          onPlaybackStatusUpdate={(status) => setStatus(() => status)}
         />
       </View>
       <Text style={styles.videoTitle}>Why Netflix shares are down 10%</Text>
@@ -32,5 +41,10 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#646464',
     marginTop: 20,
+  },
+  video: {
+    alignSelf: 'center',
+    width: 420,
+    height: 400,
   },
 });

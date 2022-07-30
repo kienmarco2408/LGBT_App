@@ -82,7 +82,7 @@ export default function VideoScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   mainView: {
-    paddingTop: 10,
+    padding: 20,
     paddingLeft: 16,
   },
   heading: {

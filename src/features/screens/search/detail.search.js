@@ -5,9 +5,7 @@ import { NewsListSearch } from '../../../components/searchscreen/searchdetailscr
 export default function DetailSearch({ navigation }) {
   return (
     <SafeAreaView>
-      <View>
-        <NewsListSearch />
-      </View>
+      <NewsListSearch />
     </SafeAreaView>
   );
 }
